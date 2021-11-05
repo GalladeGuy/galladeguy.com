@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>
+            .center {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 600px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>console.log = function(message) {document.getElementById('result').innerHTML = message;};</script>
+            
+        <div class="center">
+            <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+            <script type='text/javascript'>
+                var Module = {
+                    canvas: (function() { return document.getElementById('canvas'); })()
+                };
+            </script>
+            <script src="Asteroids/Asteroids.js"></script>
+        </div>
+            
+            <p style="text-align:center"><b>🕹 Controls:<br>
+            WASD    -    Move<br>
+            Space   -    Shoot<br></b></p>
+            
+            <h1 style="text-align:center"><div id="result"></div></h1>
+    </body>
+</html>
